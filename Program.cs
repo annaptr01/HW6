@@ -51,7 +51,7 @@ EvenNumberFinder(createdArray);
 //Найдите сумму элементов, стоящих на нечётных позициях. (1,3)
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6] -> 0
-
+/*
 
 int [] CreateRandomArray (int size, int minVal, int maxVal)  //создала рандомный массив со случайными числами
 {
@@ -72,7 +72,7 @@ void ShowArray(int [] array1)  //вывести массив
 int FindSumNotEvenNum (int [] array1)  //поиск суммы чисел на нечетных позициях
 {
     int notEvenNum = 0;
-    for(int i = 0; i < array1.Length; i++)
+    for(int i = 0; i < array1.Length; i = i + 2)
        if(array1[i] % 2 != 0)
          sum += array1[i];
     return notEvenNum;
@@ -82,10 +82,12 @@ int sizeArray = 4;
 int minArray = -99;
 int maxArray = 99;
 
-int createdArray = CreateRandomArray (int sizeArray, int minArray, int maxArray);
+int [] newArray = CreateRandomArray (int sizeArray, int minArray, int maxArray);
+ShowArray(newArray);
+int [] createdArray = FindSumNotEvenNum(newArray);
 ShowArray(createdArray);
 Console.WriteLine($"The sum of not even-numbered elements are {FindSumNotEvenNum(createdArray)}");
-
+*/
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -93,7 +95,49 @@ Console.WriteLine($"The sum of not even-numbered elements are {FindSumNotEvenNum
 //Задача 38: Задайте массив вещественных чисел. 
 //Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
+/*
 
+int [] CreateRandomArray (int size, int minVal, int maxVal)  
+{
+    int [] newArray = new int[size];
+    
+    for(int i = 0; i < size; i++)
+        newArray[i] = new Random().Next(minVal, maxVal + 1);
+    return newArray;
+}
 
+void PrintArray(int [] array1)  
+{
+    for(int i = 0; i < array1.Length; i++)
+       Console.Write(array1[i] + " ");
+    Console.WriteLine();
+}
 
+int DifferenceFinder (int [] array)
+{
+    int result;
+    int minElem = 0;
+    int maxElem = 1;
+    for(int i = 0; i < array.Length; i++)
+    {
+        result = array[maxElem] - array[minElem];
+        if(array[i] > array[maxElem])
+           array[i] = array[maxElem];
+        else if(array[i] < array[minElem])
+           array[i] = array[minElem];
+        else 
+           return array[i];
+    }
+    return array;
+}
 
+int sizeArray = 5;
+int minValue = 0;
+int maxValue = 99;
+
+int [] createdArr = CreateRandomArray(sizeArray, minValue, maxValue);
+PrintArray(createdArr);
+int [] newArray = DifferenceFinder(createdArr);
+PrintArray(newArray);
+
+*/
