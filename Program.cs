@@ -141,4 +141,3 @@ int [] newArray = DifferenceFinder(createdArr);
 PrintArray(newArray);
 Console.WriteLine($"Difference between max and min is: {newArray}");
 
-*/
