@@ -95,7 +95,7 @@ Console.WriteLine($"The sum of not even-numbered elements are {FindSumNotEvenNum
 //Задача 38: Задайте массив вещественных чисел. 
 //Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
-/*
+
 
 int [] CreateRandomArray (int size, int minVal, int maxVal)  
 {
@@ -139,5 +139,6 @@ int [] createdArr = CreateRandomArray(sizeArray, minValue, maxValue);
 PrintArray(createdArr);
 int [] newArray = DifferenceFinder(createdArr);
 PrintArray(newArray);
+Console.WriteLine($"Difference between max and min is: {newArray}");
 
 */
